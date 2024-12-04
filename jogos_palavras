@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width"=device-width, initial-scale=1.0">
+    <title> logo da forca simples</title>
+    <style>
+        <body { font-family: arial, san-serif; text-align:center;margin-top: 50px;}
+        .word { font-size: 24px; letter-spacing: 5px; }
+        .message { color: red; margin-top: 20px; }
+    </style>
+ </head>
+ <body>
+      <h1>jogo da forca</h1>
+
+      <div class="word" id="word" id="word">_ _ _ _ _</div>
+
+      <p>tentativas: <span id="tries">6</span></p>
+
+      <input id="input" type="text" maxlength="1" />
+
+      <button onclick="play()">chutar</button>
+
+      <p class="message" id="message"></p>
+
+      <script>
+           const word = "MAÇA", display =array(word.length).fill("_"), tries =document.getElementById("tries");
+           function play() {
+
+            let input = document.getElementById("input").value.toUpperCase();
+
+            document.getElementById("input").value = "";
+
+            if (!input || display.includes(input) || tries.innerText == 0) return;
+
+            if (word.includes(input)) word.plit("").forEach((1, i)) => { if (1 === input) display[i] = 1 });
+
+            else trie.innerText--;
+
+            document.getElementById("word").innerText = dispay.join(" ");
+
+            document.getElementById("message").innerText = display.include("_") ? (trie.innerText == 0 ? "Vocẽ perdeu!" > "") : "Vocẽ venceu!";
+
+           }
+           
+    </script>
+
+</body>
+</html>
+
